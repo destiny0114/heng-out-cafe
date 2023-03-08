@@ -22,7 +22,7 @@ const nextConfig = {
     return [
       {
         // matching all API routes
-        source: "https://heng-out-cafe.myshopify.com/api/2022-10/graphql",
+        source: "/api/:path*",
         headers: [
           { key: "Access-Control-Allow-Credentials", value: "true" },
           { key: "Access-Control-Allow-Origin", value: "*" },
