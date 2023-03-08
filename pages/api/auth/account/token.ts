@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import cookie from "cookie";
 import { fetchCustomer } from "@hooks/useCustomer";
 import { User } from "@libs/types";
-import { graphqlClient } from "@libs/api";
+import { graphqlClient, graphqlClient2 } from "@libs/api";
 import { GetCustomerDocument } from "@graphql/generated/graphql";
 
 interface NextExtendedApiRequest extends NextApiRequest {
@@ -20,7 +20,7 @@ type Data = {
 export default async function handler(req: NextExtendedApiRequest, res: NextApiResponse<Data>) {
   if (req.method === "POST") {
     const { access_token } = req.body;
-    const data = await graphqlClient.request(GetCustomerDocument, { accessToken: access_token });
+    const data = await graphqlClient2.request(GetCustomerDocument, { accessToken: access_token });
 
     res.setHeader(
       "Set-Cookie",
