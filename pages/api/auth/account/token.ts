@@ -19,6 +19,7 @@ export default async function handler(req: NextExtendedApiRequest, res: NextApiR
   if (req.method === "POST") {
     const { access_token } = req.body;
     const user = await fetchCustomer({ accessToken: access_token });
+    console.log(user);
 
     res.setHeader(
       "Set-Cookie",
