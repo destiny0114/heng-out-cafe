@@ -1,0 +1,91 @@
+.hero {
+  display: flex;
+  min-height: auto;
+  margin-bottom: 40rem;
+}
+
+.hero .artwork {
+  background-color: #cad4e4;
+  flex: 1;
+  position: relative;
+  z-index: 5;
+}
+
+.artwork .frame {
+  position: absolute;
+  width: 50rem;
+  height: 30rem;
+  top: 8rem;
+  left: 3rem;
+  border: 10px solid #ffffff;
+}
+
+.artwork img {
+  position: absolute;
+  width: 50rem;
+  height: 30rem;
+  top: 13rem;
+  left: 8rem;
+  opacity: 0;
+}
+
+.hero .about {
+  background-color: #4b5d78;
+  width: 60%;
+}
+
+.about {
+  padding: 12rem 18rem;
+}
+
+.about div {
+  opacity: 0;
+}
+
+.about h1 {
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 4.8rem;
+  max-width: 18rem;
+}
+
+.about p {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+}
+
+/* hi-res laptops and desktops */
+@media only screen and (min-width: 1281px) {
+  .artwork .frame {
+    width: 75rem;
+    height: 50rem;
+    top: 12rem;
+    left: 10rem;
+  }
+
+  .artwork img {
+    width: 75rem;
+    height: 50rem;
+    top: 18rem;
+    left: 15rem;
+  }
+
+  .about {
+    padding: 20rem 24rem;
+  }
+
+  .about h1 {
+    font-size: 5rem;
+    line-height: 6.4rem;
+    max-width: 23rem;
+  }
+
+  .about p {
+    font-size: 2.7rem;
+    line-height: 3.8rem;
+  }
+}

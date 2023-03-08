@@ -1,0 +1,135 @@
+.slider__wrapper {
+  position: relative;
+  margin-bottom: 6rem;
+}
+
+.slider__wrapper h1,
+.slider__wrapper h5 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 2.4rem;
+  color: black;
+}
+
+.slider__wrapper h5 {
+  font-size: 1.5rem;
+  color: #3a3f44;
+  font-weight: 400;
+  margin: 0.8rem 0;
+}
+
+.slider__container {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  position: relative;
+  width: 20rem;
+}
+
+.slider__track,
+.slider__range,
+.slider__left_value,
+.slider__right_value {
+  position: absolute;
+}
+
+.slider__track,
+.slider__range {
+  border-radius: 3px;
+  height: 5px;
+}
+
+.slider__track {
+  background-color: #eff6ff;
+  width: 100%;
+  z-index: 1;
+}
+
+.slider__range {
+  background-color: #252525;
+  z-index: 2;
+}
+
+.slider__left_value,
+.slider__right_value {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #334354;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.slider__left_value {
+  left: 0.6rem;
+}
+
+.slider__right_value {
+  right: -0.4rem;
+}
+
+/* Removing the default appearance */
+.thumb,
+.thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.thumb {
+  pointer-events: none;
+  position: absolute;
+  height: 0;
+  width: 20rem;
+  outline: none;
+}
+
+.thumb__zindex_3 {
+  z-index: 3;
+}
+
+.thumb__zindex_4 {
+  z-index: 4;
+}
+
+.thumb__zindex_5 {
+  z-index: 5;
+}
+
+/* For Chrome browsers */
+.thumb::-webkit-slider-thumb {
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 1.8rem;
+  width: 1.8rem;
+  margin-top: 0.5rem;
+  pointer-events: all;
+  position: relative;
+}
+
+/* For Firefox browsers */
+.thumb::-moz-range-thumb {
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 1.8rem;
+  width: 1.8rem;
+  margin-top: 0.8rem;
+  pointer-events: all;
+  position: relative;
+}
+
+/* hi-res laptops and desktops */
+@media only screen and (min-width: 1281px) {
+  .slider,
+  .thumb {
+    width: 28rem;
+  }
+}

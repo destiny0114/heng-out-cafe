@@ -1,0 +1,26 @@
+.paginate {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.paginate button {
+  padding: 1rem 3rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: none;
+  outline: 1px solid transparent;
+  background: #ededf7;
+  width: 100%;
+  color: rgb(145, 145, 145);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.paginate button:hover {
+  transform: scale(1.05);
+}

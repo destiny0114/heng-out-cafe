@@ -1,0 +1,30 @@
+.product {
+  box-shadow: 2px 8px 50px rgba(33, 58, 77, 0.25);
+  padding: 2em;
+  background-color: white;
+}
+
+.product svg {
+  width: 8em;
+  height: auto;
+  margin: 1em 3em;
+}
+
+.product h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* hi-res laptops and desktops */
+@media only screen and (min-width: 1281px) {
+  .product svg {
+    width: 12em;
+    margin: 2em 4em;
+  }
+
+  .product h1 {
+    font-size: 2.4rem;
+  }
+}

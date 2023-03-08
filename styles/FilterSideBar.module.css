@@ -1,0 +1,27 @@
+.criteria_wrapper {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.criteria {
+  padding: 0.2rem;
+  border-bottom: 3px solid #e3eff5;
+}
+
+.criteria h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #9dacb9;
+}
+
+.criteria h1:first-child {
+  font-size: 2.4rem;
+  color: black;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.criteria h1:not(:first-child) {
+  cursor: pointer;
+}

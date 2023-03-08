@@ -1,0 +1,80 @@
+footer.footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  height: 40rem;
+  z-index: 1;
+  background-color: #003554;
+}
+
+.footer .content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10rem;
+  flex: 1;
+}
+
+.content .description {
+  grid-column: span 1;
+}
+
+.description li:first-child {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #7e9bb6;
+}
+
+.description li {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.footer .copyright {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: solid 3px white;
+}
+
+.copyright h5 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.copyright h5 .creator {
+  font-weight: 700;
+}
+
+/* hi-res laptops and desktops */
+@media only screen and (min-width: 1281px) {
+  footer.footer {
+    height: 40rem;
+  }
+
+  .footer .content {
+    gap: 25rem;
+  }
+
+  .description li:first-child {
+    font-size: 2.6rem;
+  }
+
+  .description li {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .copyright h5 {
+    font-size: 1.6rem;
+  }
+}

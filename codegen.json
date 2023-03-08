@@ -1,0 +1,26 @@
+{
+  "overwrite": true,
+  "schema": {
+    "https://heng-out-cafe.myshopify.com/api/2022-10/graphql.json": {
+      "headers": {
+        "X-Shopify-Storefront-Access-Token": "979ec8ccf9928bac368045daacf91220",
+        "Content-Type": "application/json"
+      }
+    }
+  },
+  "documents": "./graphql/**/*.graphql",
+  "generates": {
+    "./graphql/generated/graphql.ts": {
+      "plugins": ["typescript", "typescript-operations", "typescript-react-query"]
+    }
+  },
+  "config": {
+    "fetcher": "graphql-request",
+    "noNamespaces": true,
+    "pureMagicComment": true,
+    "exposeQueryKeys": true,
+    "exposeFetcher": true,
+    "withHooks": true,
+    "addInfiniteQuery": true
+  }
+}

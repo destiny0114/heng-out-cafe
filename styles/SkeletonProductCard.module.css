@@ -1,0 +1,11 @@
+.skeleton_wrapper {
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton_product_card {
+  width: 100%;
+  height: auto;
+}

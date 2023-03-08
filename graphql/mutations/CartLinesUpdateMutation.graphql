@@ -1,0 +1,20 @@
+mutation updateCartItems($cartId: ID!, $lines: [CartLineUpdateInput!]!) {
+  cartLinesUpdate(cartId: $cartId, lines: $lines) {
+    cart {
+      id
+      checkoutUrl
+      buyerIdentity {
+        email
+        phone
+        customer {
+          id
+        }
+        countryCode
+      }
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}

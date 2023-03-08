@@ -1,0 +1,20 @@
+mutation addCartItems($cartId: ID!, $lines: [CartLineInput!]!) {
+  cartLinesAdd(cartId: $cartId, lines: $lines) {
+    cart {
+      id
+      checkoutUrl
+      buyerIdentity {
+        email
+        phone
+        customer {
+          id
+        }
+        countryCode
+      }
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}

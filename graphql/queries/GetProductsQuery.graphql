@@ -1,0 +1,40 @@
+query getProducts($first: Int!, $reverse: Boolean, $after: String, $query: String) {
+  products(first: $first, reverse: $reverse, after: $after, query: $query) {
+    edges {
+      node {
+        id
+        title
+        description
+        productType
+        tags
+        variants(first: 1) {
+          edges {
+            node {
+              id
+              price {
+                currencyCode
+                amount
+              }
+            }
+          }
+        }
+        images(first: 1) {
+          edges {
+            node {
+              id
+              url
+              altText
+            }
+          }
+        }
+      }
+      cursor
+    }
+    pageInfo {
+      startCursor
+      endCursor
+      hasPreviousPage
+      hasNextPage
+    }
+  }
+}

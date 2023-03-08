@@ -1,0 +1,25 @@
+.text_input_wrapper {
+  height: 8rem;
+  max-height: 8rem;
+}
+
+input.text_input {
+  width: 100%;
+  padding: 1.2rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  border: 2px solid #91a6ba5f;
+  border-radius: 0;
+  outline: none;
+  margin-bottom: 0.5rem;
+}
+
+input.text_input:focus {
+  border: 2px solid #91a6ba;
+}
+
+small.error_message {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  color: red;
+}

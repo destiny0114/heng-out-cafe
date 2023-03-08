@@ -1,0 +1,24 @@
+.search {
+  width: 100%;
+  background-color: #eef5f9;
+  display: flex;
+  align-items: center;
+  padding: 0.7rem;
+  border-radius: 12px;
+}
+
+.search i {
+  font-size: 4.5rem;
+  fill: #3c3c4399;
+}
+
+.search input {
+  flex: 1;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  color: #3c3c4399;
+  margin-left: 0.8rem;
+}

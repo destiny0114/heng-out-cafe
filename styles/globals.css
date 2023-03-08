@@ -1,9 +1,45 @@
-html,
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overscroll-behavior: none;
+}
+
+nav,
+section {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+nav,
+footer {
+  padding: 0 5rem;
+}
+
+section {
+  padding: 6em 5rem;
+  z-index: 3;
+}
+
+section {
+  background-color: white;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
 }
 
 a {
@@ -11,16 +47,23 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+li {
+  list-style: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+#nprogress .bar {
+  background: rgb(183, 237, 255);
+  height: 0.5rem;
+}
+
+/* hi-res laptops and desktops */
+@media only screen and (min-width: 1281px) {
+  nav,
+  footer {
+    padding: 0 12rem;
   }
-  body {
-    color: white;
-    background: black;
+
+  section {
+    padding: 8em 12rem;
   }
 }

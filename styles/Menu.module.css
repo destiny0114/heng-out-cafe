@@ -1,0 +1,88 @@
+.hero {
+  position: relative;
+  display: flex;
+  min-height: 40rem;
+  margin-bottom: 40rem;
+}
+
+.hero .filter {
+  flex: 1;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 2rem;
+}
+
+.hero .product_list_wrapper {
+  width: 75%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.product_list_wrapper .functionality {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.functionality .dropdown {
+  position: relative;
+}
+
+.functionality .dropdown .dropdown_menu {
+  position: absolute;
+  left: 0;
+  top: 3.5rem;
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.functionality .dropdown.active > .dropdown_menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown_menu button.dropdown_link:hover {
+  background-color: #f9f9f9;
+}
+
+.functionality .dropdown button {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  padding: 1rem 1.4rem;
+}
+
+.functionality .dropdown button:focus {
+  outline: none;
+}
+
+.functionality .dropdown svg {
+  margin-left: 1rem;
+  align-self: center;
+  width: 1.6rem;
+}
+
+.functionality small {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #9ea0ae;
+}
+
+.product_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}

@@ -1,0 +1,64 @@
+.hero {
+  display: flex;
+  min-height: auto;
+  margin-bottom: 40rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+  border-bottom: solid 1px #63636342;
+}
+
+.header h1 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin: 0;
+}
+
+.header h3 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+  margin-top: 0.4rem;
+}
+
+.dashboard {
+  display: flex;
+}
+
+.dashboard .navigate {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.navigate > *,
+.navigate .logout_btn {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #9dacb9;
+  margin-bottom: 2.5rem;
+}
+
+.navigate .logout_btn {
+  background-color: black;
+  border-radius: 25px;
+  color: white;
+  padding: 0.8rem 4rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.infomation {
+  width: 75%;
+}
+
+.empty_text {
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  padding: 2.5rem;
+}
