@@ -4,7 +4,7 @@ import { graphqlApiClient, graphqlClient } from "@libs/api";
 import useDebounce from "@hooks/useDebounce";
 
 export const fetchProducts = async (variables: GetProductsQueryVariables): Promise<GetProductsQuery> => {
-  const data = await graphqlApiClient.request(GetProductsDocument, variables);
+  const data = await graphqlClient.request(GetProductsDocument, variables);
   return data;
 };
 
