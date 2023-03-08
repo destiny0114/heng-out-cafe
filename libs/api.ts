@@ -1,7 +1,7 @@
 import { QueryClient } from "@tanstack/react-query";
 import { GraphQLClient } from "graphql-request";
 
-const publicEndPoint = process.env.NEXT_PREFIX_ENDPOINT || "";
+const publicEndPoint = process.env.NEXT_PUBLIC_PREFIX_ENDPOINT || "";
 const apiEndPoint = process.env.SHOPIFY_STORE_ENDPOINT || "";
 const accessToken = process.env.SHOPIFY_ACCESS_TOKEN || "";
 
@@ -16,7 +16,7 @@ export const queryClient = new QueryClient({
   },
 });
 
-export const graphqlClient = new GraphQLClient(apiEndPoint, {
+export const graphqlClient = new GraphQLClient(publicEndPoint, {
   headers: {
     "Content-Type": "application/json",
     "X-Shopify-Storefront-Access-Token": accessToken,
