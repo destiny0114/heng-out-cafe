@@ -1,7 +1,7 @@
 import { QueryClient } from "@tanstack/react-query";
 import { GraphQLClient } from "graphql-request";
 
-const publicEndPoint = process.env.VERCEL_URL || "";
+const publicEndPoint = process.env.NEXT_PREFIX_ENDPOINT || "";
 const apiEndPoint = process.env.SHOPIFY_STORE_ENDPOINT || "";
 const accessToken = process.env.SHOPIFY_ACCESS_TOKEN || "";
 
