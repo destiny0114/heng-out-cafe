@@ -35,6 +35,8 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   });
   const { mutate: createCustomerAccessTokenMutate } = useCreateCustomerAccessTokenMutation(graphqlClient, {
     onSuccess: async (data) => {
+      console.log(data);
+
       if (data?.customerAccessTokenCreate?.customerUserErrors.length) {
         setErrorMessage(data.customerAccessTokenCreate.customerUserErrors[0].message);
         return;
