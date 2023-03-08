@@ -1,10 +1,10 @@
 import { useInfiniteGetProductsQuery } from "@graphql/generated/graphql";
 import { GetProductsDocument, GetProductsQueryVariables, GetProductsQuery } from "@graphql/generated/graphql";
-import { graphqlClient } from "@libs/api";
+import { graphqlApiClient, graphqlClient } from "@libs/api";
 import useDebounce from "@hooks/useDebounce";
 
 export const fetchProducts = async (variables: GetProductsQueryVariables): Promise<GetProductsQuery> => {
-  const data = await graphqlClient.request(GetProductsDocument, variables);
+  const data = await graphqlApiClient.request(GetProductsDocument, variables);
   return data;
 };
 

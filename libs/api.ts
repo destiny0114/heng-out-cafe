@@ -1,7 +1,8 @@
 import { QueryClient } from "@tanstack/react-query";
 import { GraphQLClient } from "graphql-request";
 
-const endPoint = process.env.SHOPIFY_STORE_ENDPOINT || "";
+const publicEndPoint = process.env.VERCEL_URL || "";
+const apiEndPoint = process.env.SHOPIFY_STORE_ENDPOINT || "";
 const accessToken = process.env.SHOPIFY_ACCESS_TOKEN || "";
 
 export const queryClient = new QueryClient({
@@ -15,7 +16,7 @@ export const queryClient = new QueryClient({
   },
 });
 
-export const graphqlClient = new GraphQLClient(endPoint, {
+export const graphqlClient = new GraphQLClient(publicEndPoint, {
   headers: {
     "Content-Type": "application/json",
     "X-Shopify-Storefront-Access-Token": accessToken,
@@ -27,7 +28,7 @@ export const graphqlClient = new GraphQLClient(endPoint, {
   },
 });
 
-export const graphqlClient2 = new GraphQLClient("https://heng-out-cafe.myshopify.com/api/2022-10/graphql.json", {
+export const graphqlApiClient = new GraphQLClient(apiEndPoint, {
   headers: {
     "Content-Type": "application/json",
     "X-Shopify-Storefront-Access-Token": accessToken,
