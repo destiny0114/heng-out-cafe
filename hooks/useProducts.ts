@@ -9,8 +9,6 @@ export const fetchProducts = async (variables: GetProductsQueryVariables): Promi
 };
 
 export const useProducts = (limit: number, reverse?: boolean, query?: string) => {
-  console.log(process.env.SHOPIFY_ACCESS_TOKEN);
-
   const debounceQuery = useDebounce(query || "", 300);
   return useInfiniteGetProductsQuery(
     "after",
