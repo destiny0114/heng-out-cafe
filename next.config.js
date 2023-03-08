@@ -18,6 +18,14 @@ const nextConfig = {
   images: {
     domains: ["cdn.shopify.com"],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/api/2022-10/:slug*",
+        destination: `https://heng-out-cafe.myshopify.com/api/2022-10/:slug*`,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
