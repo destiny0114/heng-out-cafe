@@ -16,7 +16,7 @@ export const queryClient = new QueryClient({
   },
 });
 
-export const graphqlClient = new GraphQLClient(publicEndPoint, {
+export const graphqlClient = new GraphQLClient(apiEndPoint, {
   headers: {
     "Content-Type": "application/json",
     "X-Shopify-Storefront-Access-Token": accessToken,
