@@ -1,4 +1,4 @@
-<p align="center"><img src="public/favicon.ico" width="350" height="350"></p>
+<p align="center"><img src="public/favicon.ico" width="320" height="300"></p>
 
 ## About Heng Out Cafe
 
