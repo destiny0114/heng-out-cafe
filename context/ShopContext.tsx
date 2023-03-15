@@ -60,7 +60,10 @@ const ShopProvider: React.FC<ShopProviderProps> = ({ children }) => {
   });
 
   useEffect(() => {
-    if (!auth.user) return;
+    if (!auth.user) {
+      setCartId(null);
+      return;
+    }
     checkCartExist(auth.user);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps

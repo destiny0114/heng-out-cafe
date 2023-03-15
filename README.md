@@ -1,34 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center"><img src="public/static/assets/logo.svg" width="450" height="150"></p>
 
-## Getting Started
+## About Heng Out Cafe
 
-First, run the development server:
+Foodie is a community to sharing world of food knowledge. The blog show various recipes to let housevives bring joy to their family. Let's eat happy and healthy. All recipes are came from [Michelle](https://nowcookthis.com/) make sure to check it out, she is very awesome food blogger.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- Static Site Generation
+- Search
+- Caching
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technology
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- [Nextjs](https://nextjs.org/)
+- [Mantine](https://mantine.dev/)
+- [gray-matter](https://yarnpkg.com/package/gray-matter)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Installation
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The web application need to run by [docker](https://www.docker.com/). The application is develop on apple silicon that are running arm64 if your machine is running on x86 maybe need modify docker-compose.yml and remove arm64v8 and platform linux/amd64. Be sure go check them out if you don't have them.
 
-## Learn More
+## Demo
 
-To learn more about Next.js, take a look at the following resources:
+visit here -> (https://foodie-blog-one.vercel.app/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The Application is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
