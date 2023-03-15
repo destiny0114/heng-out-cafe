@@ -1,8 +1,8 @@
-<p align="center"><img src="public/static/assets/logo.svg" width="450" height="150"></p>
+<p align="center"><img src="assets/logo.svg" width="450" height="450"></p>
 
 ## About Heng Out Cafe
 
-Foodie is a community to sharing world of food knowledge. The blog show various recipes to let housevives bring joy to their family. Let's eat happy and healthy. All recipes are came from [Michelle](https://nowcookthis.com/) make sure to check it out, she is very awesome food blogger.
+Heng Out Cafe is a small sized ecommerce bakery cafe shop. They have various of breads, sandwichs even desserts.
 
 - Static Site Generation
 - Search

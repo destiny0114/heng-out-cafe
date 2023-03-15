@@ -21,6 +21,16 @@ export default async function handler(req: NextExtendedApiRequest, res: NextApiR
         path: "/",
       })
     );
+    res.setHeader(
+      "Set-Cookie",
+      cookie.serialize("cartId", "", {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        maxAge: Number(new Date(0)),
+        sameSite: "strict",
+        path: "/",
+      })
+    );
     return res.status(200).json({
       user: undefined,
       message: "Token destroyed.",
