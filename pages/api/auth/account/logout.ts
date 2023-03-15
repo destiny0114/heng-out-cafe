@@ -11,26 +11,22 @@ type Data = {
 
 export default async function handler(req: NextExtendedApiRequest, res: NextApiResponse<Data>) {
   if (req.method === "POST") {
-    res.setHeader(
-      "Set-Cookie",
+    res.setHeader("Set-Cookie", [
       cookie.serialize("access_token", "", {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
         maxAge: Number(new Date(0)),
         sameSite: "strict",
         path: "/",
-      })
-    );
-    res.setHeader(
-      "Set-Cookie",
+      }),
       cookie.serialize("cartId", "", {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
         maxAge: Number(new Date(0)),
         sameSite: "strict",
         path: "/",
-      })
-    );
+      }),
+    ]);
     return res.status(200).json({
       user: undefined,
       message: "Token destroyed.",
