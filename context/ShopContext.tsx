@@ -1,4 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import { UseQueryResult } from "@tanstack/react-query";
 import {
   GetCartQuery,
@@ -28,6 +29,7 @@ type ShopContextType = {
 const ShopContext = createContext<ShopContextType>({} as ShopContextType);
 
 const ShopProvider: React.FC<ShopProviderProps> = ({ children }) => {
+  const router = useRouter();
   const { auth } = useAuth();
   const [cartId, setCartId] = useState<string | null>(null);
   const cartQuery = useCart(cartId || "");
@@ -103,25 +105,35 @@ const ShopProvider: React.FC<ShopProviderProps> = ({ children }) => {
 
   const addProductToCart = useCallback(
     (item: CartLineAdd) => {
+      if (!auth.user) {
+        router.push("/login");
+        return;
+      }
       addItemsToCartMutate({ cartId: cartId!, lines: [item] });
     },
-    [addItemsToCartMutate, cartId]
+    [addItemsToCartMutate, auth.user, cartId]
   );
 
   const updateProductToCart = useCallback(
     (item: CartLineUpdate) => {
+      if (!auth.user) {
+        router.push("/login");
+        return;
+      }
       updateItemsToCartMutate({ cartId: cartId!, lines: [item] });
     },
-    [cartId, updateItemsToCartMutate]
+    [auth.user, cartId, updateItemsToCartMutate]
   );
 
   const removeItemFromCart = useCallback(
     ({ merchandiseId }: CartLineRemove) => {
-      if (!cartId) return;
-
-      removeItemFromCartMutate({ cartId: cartId, lineIds: [merchandiseId] });
+      if (!auth.user) {
+        router.push("/login");
+        return;
+      }
+      removeItemFromCartMutate({ cartId: cartId!, lineIds: [merchandiseId] });
     },
-    [removeItemFromCartMutate, cartId]
+    [auth.user, removeItemFromCartMutate, cartId]
   );
 
   const checkCartExist = useCallback(
